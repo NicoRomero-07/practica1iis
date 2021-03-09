@@ -15,6 +15,7 @@ System.out.println("Aqui escribimos todos");
 
 }
 
+
 public Object clone() throws CloneNotSupportedException {
         return (Jarra) super.clone();
 }
@@ -30,4 +31,15 @@ public bool equals(Jarra otraJarra){
     } else { eqs = false; }
     return eqs;
     }
+
+public void llenaDesde(Jarra j){
+while((this.cantidad<this.capacidad)&&(j.cantidad>0)){
+this.cantidad++;
+j.cantidad--;
+}
+}
+public String toString(){
+return ("("+this.capacidad+","+this.cantidad+")");
+}
+
 }
